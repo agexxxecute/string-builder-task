@@ -5,7 +5,7 @@ import java.util.Stack;
 public class MyStringBuilder {
     private char[] stringValue;
     private int count;
-    private Stack<MyStringBuilderSnapshot> snapshots;
+    private final Stack<MyStringBuilderSnapshot> snapshots;
 
     public MyStringBuilder() {
         this(16);
@@ -73,9 +73,8 @@ public class MyStringBuilder {
         } catch (EmptyStackException e) {
             this.stringValue = new char[16];
             this.count = 0;
-        } finally {
-            return this;
         }
+        return this;
     }
 
     private void ensureCapacity(int minCapacity) {
