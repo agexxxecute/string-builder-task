@@ -1,5 +1,4 @@
 public class Main {
-
     public static void main(String[] args) {
         MyStringBuilder myStringBuilder = new MyStringBuilder();
         myStringBuilder.append("Hello ");
